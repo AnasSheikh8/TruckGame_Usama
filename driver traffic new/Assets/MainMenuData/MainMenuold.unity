@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   truckSelected: 0
-  currentLevel: 3
+  currentLevel: 0
 --- !u!4 &814484122
 Transform:
   m_ObjectHideFlags: 0

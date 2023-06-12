@@ -699,7 +699,7 @@ public class LevelsManager : MonoBehaviour
         LevelsDestination[4].SetActive(true);
         DirectionArrowsOfLevel[4].SetActive(true);
 
-        popUpShow("Take the cows to the");
+        popUpShow("Cows are loaded in the truck, take the cows to the fields.");
 
     }
 
