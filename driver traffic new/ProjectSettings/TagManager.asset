@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - HandleTrigger
+  - Human
+  - Vehicle
+  - ways
+  - Grass
+  - Street
+  - Water
+  - level1dp
+  - level1sp
+  - box
+  - level2sp
+  - level2dp
+  - level3sp
+  - level3dp
+  - level4sp
+  - level4dp
+  - level5sp
+  - level5dp
+  - level6sp
+  - level6dp
+  - level7sp
+  - level7dp
+  - level8sp
+  - level8dp
+  - level9sp
+  - level9dp
+  - level10sp
+  - level10dp
+  - tollTaxLv2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Node
+  - Minimap
+  - Impact
+  - Layer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
