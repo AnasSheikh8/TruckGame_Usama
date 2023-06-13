@@ -11,7 +11,7 @@ public class ScenesManager : MonoBehaviour
     public static ScenesManager instance;
 
     public int currentLevel=0;
-
+    public int currentMode = 0;
     private void Awake()
     {
         if (instance == null)

@@ -138,18 +138,8 @@ public class MainMenuManager : MonoBehaviour
 
 
 
-    public void OpenWorldSceneButton()
-    {
 
-        ScenesManager.instance.truckSelected = nowShowingTruck;
-
-        SceneManager.LoadScene(1);
-    }
-
-
-
-
-    public void MissionBasedSceneButton()
+    public void SelectBtn()
     {
 
         ScenesManager.instance.truckSelected = nowShowingTruck;
@@ -158,6 +148,28 @@ public class MainMenuManager : MonoBehaviour
     }
 
 
+
+
+    public void OpenWorldSceneButton()
+    {
+
+        ScenesManager.instance.truckSelected = nowShowingTruck;
+        ScenesManager.instance.currentMode = 0;
+        SceneManager.LoadScene(1);
+    }
+
+
+
+
+    public void MissionBasedSceneButton()
+    {
+        ScenesManager.instance.currentMode = 1;
+    }
+
+    public void SelectedLevel(int levelNum)
+    {
+        ScenesManager.instance.currentLevel = levelNum;
+    }
 
 
     // Update is called once per frame
