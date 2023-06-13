@@ -41,4 +41,10 @@ public class LevelController : MonoBehaviour
     }
 
 
+
+    public void homeBtn()
+    {
+        SceneManager.LoadScene(0);
+    } 
+
 }

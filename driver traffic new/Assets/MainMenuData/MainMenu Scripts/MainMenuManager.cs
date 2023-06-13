@@ -55,6 +55,10 @@ public class MainMenuManager : MonoBehaviour
 
         //For testing
 
+
+
+
+
         int levelsPassed= PlayerPrefs.GetInt("levelsPassed");
         for(int i=0; i <= levelsPassed; i++) 
         {
@@ -63,7 +67,7 @@ public class MainMenuManager : MonoBehaviour
             missions[i].GetComponent<Button>().enabled = true;
             if (i != 0)
             {
-                locks[i].SetActive(true);
+                locks[i].SetActive(false);
 
             }
         }

@@ -40,6 +40,9 @@ public class LevelsManager : MonoBehaviour
     public GameObject popUp;
     public Text popUpText;
 
+
+    public int[] rewards;
+
     //bool level1spCollided;
 
 
