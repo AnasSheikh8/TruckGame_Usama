@@ -20,6 +20,10 @@ public class MainMenuManager : MonoBehaviour
     public Text PopUpHeader;
     public Text coinsAvailableTxt;
     // Start is called before the first frame update
+    public GameObject[] missions;
+    public GameObject[] locks;
+
+
 
     private void Awake()
     {
@@ -48,11 +52,21 @@ public class MainMenuManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("coins", 5000);
         }
-        
+
         //For testing
 
+        int levelsPassed= PlayerPrefs.GetInt("levelsPassed");
+        for(int i=0; i <= levelsPassed; i++) 
+        {
 
 
+            missions[i].GetComponent<Button>().enabled = true;
+            if (i != 0)
+            {
+                locks[i].SetActive(true);
+
+            }
+        }
 
 
         for (int i=0; i<trucksList.Length; i++)
@@ -202,7 +216,7 @@ public class MainMenuManager : MonoBehaviour
 
 
 
-        Debug.Log("Showing Truck=" + nowShowingTruck);
+       // Debug.Log("Showing Truck=" + nowShowingTruck);
     }
 
 

@@ -43,17 +43,7 @@ public class trucksManager : MonoBehaviour
     {
 
 
-        if (trucksList[2].activeInHierarchy)
-        {
-            Debug.Log("true");
-
-        }
-        else
-        {
-            Debug.Log("false");
-
-        }
-
+        
 
 
 

@@ -38,6 +38,6 @@ public class ScenesManager : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("Level=" + currentLevel);
+    //    Debug.Log("Level=" + currentLevel);
     }
 }

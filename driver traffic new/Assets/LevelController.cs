@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
+
+
+    int currentLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,15 @@ public class LevelController : MonoBehaviour
 
     public void nextLevel()
     {
-        ScenesManager.instance.currentLevel++;
+       currentLevel= ScenesManager.instance.currentLevel++;
+        if (currentLevel > PlayerPrefs.GetInt("levelsPassed"))
+        {
+            PlayerPrefs.SetInt("levelsPassed", currentLevel);
+
+        }
+        else 
+        { 
+        }
         SceneManager.LoadScene(2);
     }
 
