@@ -57,7 +57,9 @@ public class LevelsManager : MonoBehaviour
         currentLevel = ScenesManager.instance.currentLevel;
         craneAnim.enabled = false;
         floorPerson.SetActive(false);
+        level5Cow.SetActive(false);
 
+        StartCoroutine(loadingSlider());
 
 
         if (currentLevel == 2)
@@ -128,9 +130,20 @@ public class LevelsManager : MonoBehaviour
         }
 
 
-        level5Cow.SetActive(false);
        
     }
+
+
+
+    IEnumerator loadingSlider()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        ScenesManager.instance.loadingSlider.value = 0;
+        ScenesManager.instance.loadingCanvas.SetActive(false);
+    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -741,26 +754,31 @@ public class LevelsManager : MonoBehaviour
 
 
         locationSignsSP[5].SetActive(false);
-        //LevelCameras[1].SetActive(true);
 
-        //yield return new WaitForSeconds(2);
-
+        yield return new WaitForSeconds(1);
+        LevelCameras[5].SetActive(true);
 
         BlackPanel.SetActive(false);
+        yield return new WaitForSeconds(9);
+
+
         //craneAnim.enabled = true;
         //yield return new WaitForSeconds(14);
-        //BlackPanel.SetActive(true);
+        BlackPanel.SetActive(true);
+        Instantiate(boxesPref[5], container);
 
-        //yield return new WaitForSeconds(1);
-        //BlackPanel.SetActive(false);
-
-
-
-
-
-        //LevelCameras[1].SetActive(false);
+        LevelCameras[5].SetActive(false);
 
         gameCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        
+        BlackPanel.SetActive(false);
+
+
+
+
 
 
         //yield return new WaitForSeconds(2);
@@ -768,6 +786,8 @@ public class LevelsManager : MonoBehaviour
         LevelsDestination[5].SetActive(true);
         DirectionArrowsOfLevel[5].SetActive(true);
 
+
+        popUpShow("Drop the wheat bags to the factory.");
 
     }
 
@@ -802,7 +822,6 @@ public class LevelsManager : MonoBehaviour
     {
 
 
-
         GameControl.manager.VehicleHandBrake(true);
         GameControl.manager.VehicleAccelForward(0f);
         GameControl.manager.VehicleAccelBack(0f);
@@ -821,32 +840,41 @@ public class LevelsManager : MonoBehaviour
 
 
         locationSignsSP[6].SetActive(false);
-        //LevelCameras[1].SetActive(true);
 
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        LevelCameras[6].SetActive(true);
+
+        BlackPanel.SetActive(false);
+        yield return new WaitForSeconds(9);
+
+
+        //craneAnim.enabled = true;
+        //yield return new WaitForSeconds(14);
+        BlackPanel.SetActive(true);
+        //Instantiate(boxesPref[5], container);
+
+        LevelCameras[6].SetActive(false);
+
+        gameCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(1);
 
 
         BlackPanel.SetActive(false);
-        //craneAnim.enabled = true;
-        //yield return new WaitForSeconds(14);
-        //BlackPanel.SetActive(true);
-
-        //yield return new WaitForSeconds(1);
-        //BlackPanel.SetActive(false);
 
 
 
 
-
-        //LevelCameras[1].SetActive(false);
-
-        gameCanvas.SetActive(true);
 
 
         //yield return new WaitForSeconds(2);
         GameControl.manager.VehicleHandBrake(false);
         LevelsDestination[6].SetActive(true);
         DirectionArrowsOfLevel[6].SetActive(true);
+
+
+        popUpShow("Take the truck to the wood factory.");
+
 
 
     }
@@ -894,32 +922,40 @@ public class LevelsManager : MonoBehaviour
 
 
         locationSignsSP[7].SetActive(false);
-        //LevelCameras[1].SetActive(true);
 
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        LevelCameras[7].SetActive(true);
+
+        BlackPanel.SetActive(false);
+        yield return new WaitForSeconds(10);
+
+
+        //craneAnim.enabled = true;
+        //yield return new WaitForSeconds(14);
+        BlackPanel.SetActive(true);
+        //Instantiate(boxesPref[5], container);
+
+        LevelCameras[7].SetActive(false);
+
+        gameCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(1);
 
 
         BlackPanel.SetActive(false);
-        //craneAnim.enabled = true;
-        //yield return new WaitForSeconds(14);
-        //BlackPanel.SetActive(true);
-
-        //yield return new WaitForSeconds(1);
-        //BlackPanel.SetActive(false);
 
 
 
 
-
-        //LevelCameras[1].SetActive(false);
-
-        gameCanvas.SetActive(true);
 
 
         //yield return new WaitForSeconds(2);
         GameControl.manager.VehicleHandBrake(false);
         LevelsDestination[7].SetActive(true);
         DirectionArrowsOfLevel[7].SetActive(true);
+
+
+        popUpShow("Drop wooden piles to the destination.");
 
 
     }

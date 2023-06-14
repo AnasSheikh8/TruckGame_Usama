@@ -9,6 +9,8 @@ public class trucksManager : MonoBehaviour
     public GameObject[] trucksList;
     public int truckSelected;
 
+    public GameObject gamePausedPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,14 @@ public class trucksManager : MonoBehaviour
 
     }
 
+
+    public void resumeBtn()
+    {
+        Time.timeScale = 1;
+        gamePausedPanel.SetActive(false);
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -49,7 +59,9 @@ public class trucksManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
+            Time.timeScale = 0;
+            gamePausedPanel.SetActive(true);
         }
 
         //Debug.Log(truckSelected);

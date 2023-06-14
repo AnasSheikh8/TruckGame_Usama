@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ScenesManager : MonoBehaviour
 {
 
@@ -12,6 +12,10 @@ public class ScenesManager : MonoBehaviour
 
     public int currentLevel=0;
     public int currentMode = 0;
+
+    public Slider loadingSlider;
+    public GameObject loadingCanvas;
+    float sliderSpeed = 0.06f;
     private void Awake()
     {
         if (instance == null)
@@ -37,7 +41,12 @@ public class ScenesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (loadingSlider.value < 1)
+        {
+            loadingSlider.value = loadingSlider.value+ Time.deltaTime * sliderSpeed;
+        }
+        
+        
     //    Debug.Log("Level=" + currentLevel);
     }
 }

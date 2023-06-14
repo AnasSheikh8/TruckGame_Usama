@@ -23,7 +23,8 @@ public class LevelController : MonoBehaviour
     public void replayLevel()
     {
         //ScenesManager.instance.currentLevel;
-        SceneManager.LoadScene(2);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void nextLevel()
@@ -44,6 +45,7 @@ public class LevelController : MonoBehaviour
 
     public void homeBtn()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     } 
 

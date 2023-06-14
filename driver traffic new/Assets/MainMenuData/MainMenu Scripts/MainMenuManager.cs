@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
 
-
+    public GameObject[] trucksSpecs;
     public GameObject[] trucksList;
     public int[] trucksRateList;
     public int thisTruckRate;
@@ -78,11 +78,13 @@ public class MainMenuManager : MonoBehaviour
             if (i == 0)
             {
                 trucksList[0].SetActive(true);
+                trucksSpecs[0].SetActive(true);
             }
             else
             {
                 trucksList[i].SetActive(false);
 
+                trucksSpecs[i].SetActive(false);
             }
 
         }
@@ -115,10 +117,13 @@ public class MainMenuManager : MonoBehaviour
             if (i == nowShowingTruck)
             {
                 trucksList[i].SetActive(true);
+                trucksSpecs[i].SetActive(true);
             }
             else
             {
                 trucksList[i].SetActive(false);
+
+                trucksSpecs[i].SetActive(false);
             }
         }
     }
@@ -145,10 +150,12 @@ public class MainMenuManager : MonoBehaviour
             if (i == nowShowingTruck)
             {
                 trucksList[i].SetActive(true);
+                trucksSpecs[i].SetActive(true);
             }
             else
             {
                 trucksList[i].SetActive(false);
+                trucksSpecs[i].SetActive(false);
             }
         }
 
