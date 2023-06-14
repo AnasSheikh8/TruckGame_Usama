@@ -933,7 +933,7 @@ public class LevelsManager : MonoBehaviour
         //craneAnim.enabled = true;
         //yield return new WaitForSeconds(14);
         BlackPanel.SetActive(true);
-        //Instantiate(boxesPref[5], container);
+        Instantiate(boxesPref[7], container);
 
         LevelCameras[7].SetActive(false);
 
