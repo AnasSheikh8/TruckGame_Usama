@@ -60,7 +60,7 @@ public class MainMenuManager : MonoBehaviour
 
 
         int levelsPassed= PlayerPrefs.GetInt("levelsPassed");
-        for(int i=0; i <= levelsPassed; i++) 
+        for(int i=0; i <= levelsPassed+1; i++) 
         {
 
 

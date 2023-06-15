@@ -998,32 +998,40 @@ public class LevelsManager : MonoBehaviour
 
 
         locationSignsSP[8].SetActive(false);
-        //LevelCameras[1].SetActive(true);
 
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        LevelCameras[8].SetActive(true);
+
+        BlackPanel.SetActive(false);
+        yield return new WaitForSeconds(14);
+
+
+        //craneAnim.enabled = true;
+        //yield return new WaitForSeconds(14);
+        BlackPanel.SetActive(true);
+        Instantiate(boxesPref[8], container);
+
+        LevelCameras[8].SetActive(false);
+
+        gameCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(1);
 
 
         BlackPanel.SetActive(false);
-        //craneAnim.enabled = true;
-        //yield return new WaitForSeconds(14);
-        //BlackPanel.SetActive(true);
-
-        //yield return new WaitForSeconds(1);
-        //BlackPanel.SetActive(false);
 
 
 
 
-
-        //LevelCameras[1].SetActive(false);
-
-        gameCanvas.SetActive(true);
 
 
         //yield return new WaitForSeconds(2);
         GameControl.manager.VehicleHandBrake(false);
         LevelsDestination[8].SetActive(true);
         DirectionArrowsOfLevel[8].SetActive(true);
+
+
+        popUpShow("Deliver wooden walls to industrial area.");
 
 
     }
@@ -1057,6 +1065,7 @@ public class LevelsManager : MonoBehaviour
 
 
 
+
         GameControl.manager.VehicleHandBrake(true);
         GameControl.manager.VehicleAccelForward(0f);
         GameControl.manager.VehicleAccelBack(0f);
@@ -1075,32 +1084,41 @@ public class LevelsManager : MonoBehaviour
 
 
         locationSignsSP[9].SetActive(false);
-        //LevelCameras[1].SetActive(true);
 
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        LevelCameras[9].SetActive(true);
+
+        BlackPanel.SetActive(false);
+        yield return new WaitForSeconds(10);
+
+
+        //craneAnim.enabled = true;
+        //yield return new WaitForSeconds(14);
+        BlackPanel.SetActive(true);
+        Instantiate(boxesPref[9], container);
+
+        LevelCameras[9].SetActive(false);
+
+        gameCanvas.SetActive(true);
+
+        yield return new WaitForSeconds(1);
 
 
         BlackPanel.SetActive(false);
-        //craneAnim.enabled = true;
-        //yield return new WaitForSeconds(14);
-        //BlackPanel.SetActive(true);
-
-        //yield return new WaitForSeconds(1);
-        //BlackPanel.SetActive(false);
 
 
 
 
-
-        //LevelCameras[1].SetActive(false);
-
-        gameCanvas.SetActive(true);
 
 
         //yield return new WaitForSeconds(2);
         GameControl.manager.VehicleHandBrake(false);
         LevelsDestination[9].SetActive(true);
         DirectionArrowsOfLevel[9].SetActive(true);
+
+
+        popUpShow("Deliver wooden pallets to customer's home.");
+
 
 
     }
