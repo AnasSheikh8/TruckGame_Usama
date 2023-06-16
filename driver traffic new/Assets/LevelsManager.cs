@@ -40,9 +40,10 @@ public class LevelsManager : MonoBehaviour
     public GameObject popUp;
     public Text popUpText;
 
-
+    public Text coinsTxt;
+    public Text rewardTxt;
     public int[] rewards;
-
+    int coins;
     //bool level1spCollided;
 
 
@@ -51,7 +52,7 @@ public class LevelsManager : MonoBehaviour
     {
 
 
-
+        coins=PlayerPrefs.GetInt("coins");
 
 
         currentLevel = ScenesManager.instance.currentLevel;
@@ -148,7 +149,8 @@ public class LevelsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        coinsTxt.text = "" + coins;
+        rewardTxt.text = "" + rewards[currentLevel];
     }
 
 
@@ -163,17 +165,21 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level1dp"))
         {
             StartCoroutine(level1dp());
-
+            coins= coins + rewards[0];
+            PlayerPrefs.SetInt("coins", coins);
         }
 
         if (other.CompareTag("level2sp"))
         {
             StartCoroutine(level2sp());
+
         }
 
         if (other.CompareTag("level2dp"))
         {
             StartCoroutine(level2dp());
+            coins = coins + rewards[1];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -186,6 +192,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level3dp"))
         {
             StartCoroutine(level3dp());
+            coins = coins + rewards[2];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -199,6 +207,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level4dp"))
         {
             StartCoroutine(level4dp());
+            coins = coins + rewards[3];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -213,6 +223,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level5dp"))
         {
             StartCoroutine(level5dp());
+            coins = coins + rewards[4];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -226,6 +238,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level6dp"))
         {
             StartCoroutine(level6dp());
+            coins = coins + rewards[5];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -240,6 +254,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level7dp"))
         {
             StartCoroutine(level7dp());
+            coins = coins + rewards[6];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -253,6 +269,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level8dp"))
         {
             StartCoroutine(level8dp());
+            coins = coins + rewards[7];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -268,6 +286,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level9dp"))
         {
             StartCoroutine(level9dp());
+            coins = coins + rewards[8];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
@@ -281,6 +301,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level10dp"))
         {
             StartCoroutine(level10dp());
+            coins = coins + rewards[9];
+            PlayerPrefs.SetInt("coins", coins);
 
         }
 
