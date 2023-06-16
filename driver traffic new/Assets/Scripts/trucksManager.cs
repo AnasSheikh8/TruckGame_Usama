@@ -25,6 +25,8 @@ public class trucksManager : MonoBehaviour
         {
             if (i == truckSelected)
             {
+
+
                 trucksList[i].SetActive(true);
             }
             else
