@@ -42,6 +42,7 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
 
         //For Testing
 

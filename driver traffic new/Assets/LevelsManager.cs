@@ -40,19 +40,27 @@ public class LevelsManager : MonoBehaviour
     public GameObject popUp;
     public Text popUpText;
 
-    public Text coinsTxt;
+    public Text[] coinsTxt;
     public Text rewardTxt;
     public int[] rewards;
     int coins;
     //bool level1spCollided;
 
 
+
+    public Text TimerTxt;
+    float scnds;
+    int seconds;
+    int minutes;
+    public GameObject gameOverPanel;
+    bool missionStart = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        scnds = 420f;
 
-
-        coins=PlayerPrefs.GetInt("coins");
+        coins =PlayerPrefs.GetInt("coins");
 
 
         currentLevel = ScenesManager.instance.currentLevel;
@@ -66,14 +74,19 @@ public class LevelsManager : MonoBehaviour
         if (currentLevel == 2)
         {
             popUpShow("Insufficient fuel for upcoming missions, arrows are telling the way to petrol pump.");
+            missionStart = true;
+
         }
         else if(currentLevel==4)
         {
-            
+
+            missionStart = false;
         }
         else
         {
             popUpShow("Pick the truck, and park it into the pinned location.");
+
+            missionStart = false;
         }
 
 
@@ -145,12 +158,44 @@ public class LevelsManager : MonoBehaviour
     }
 
 
+    void Timer()
+    {
+        if (missionStart)
+        {
+
+            TimerTxt.gameObject.SetActive(true);
+            if (scnds > 0)
+            {
+                scnds = scnds - Time.deltaTime;
+                seconds = ((int)scnds % 60);
+                minutes = ((int)scnds / 60);
+                TimerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                gameOverPanel.SetActive(true);
+            }
+        }
+        else
+        {
+            TimerTxt.gameObject.SetActive(false);
+
+        }
+
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
-        coinsTxt.text = "" + coins;
+        coinsTxt[0].text = "" + coins;
+        coinsTxt[1].text = "" + coins;
         rewardTxt.text = "" + rewards[currentLevel];
+
+
+        Timer();
     }
 
 
@@ -172,7 +217,6 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level2sp"))
         {
             StartCoroutine(level2sp());
-
         }
 
         if (other.CompareTag("level2dp"))
@@ -187,6 +231,7 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level3sp"))
         {
             StartCoroutine(level3sp());
+            //missionStart = true;
         }
 
         if (other.CompareTag("level3dp"))
@@ -202,6 +247,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level4sp"))
         {
             StartCoroutine(level4sp());
+            //missionStart = true;
+           // TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level4dp"))
@@ -218,6 +265,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level5sp"))
         {
             StartCoroutine(level5sp());
+            //missionStart = true;
+            //TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level5dp"))
@@ -233,6 +282,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level6sp"))
         {
             StartCoroutine(level6sp());
+            //missionStart = true;
+            //TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level6dp"))
@@ -249,6 +300,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level7sp"))
         {
             StartCoroutine(level7sp());
+           // missionStart = true;
+            //TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level7dp"))
@@ -264,6 +317,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level8sp"))
         {
             StartCoroutine(level8sp());
+            //missionStart = true;
+           // TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level8dp"))
@@ -281,6 +336,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level9sp"))
         {
             StartCoroutine(level9sp());
+            //missionStart = true;
+            //TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level9dp"))
@@ -296,6 +353,8 @@ public class LevelsManager : MonoBehaviour
         if (other.CompareTag("level10sp"))
         {
             StartCoroutine(level10sp());
+            //missionStart = true;
+            //TimerTxt.gameObject.SetActive(true);
         }
 
         if (other.CompareTag("level10dp"))
@@ -431,6 +490,8 @@ public class LevelsManager : MonoBehaviour
 
         DirectionArrowsOfLevel[0].SetActive(true);
         popUpShow("Follow the arrows to take the boxes to the destination");
+        missionStart = true;
+
     }
 
 
@@ -487,6 +548,8 @@ public class LevelsManager : MonoBehaviour
 
         DirectionArrowsOfLevel[1].SetActive(true);
         popUpShow("Deliver vegitables to the market.");
+        missionStart = true;
+
     }
 
 
@@ -567,6 +630,8 @@ public class LevelsManager : MonoBehaviour
         DirectionArrowsOfLevel[10].SetActive(true);
 
         popUpShow("Now we have enough fuel, let's park the truck");
+        missionStart = true;
+
     }
 
 
@@ -647,6 +712,8 @@ public class LevelsManager : MonoBehaviour
 
         DirectionArrowsOfLevel[3].SetActive(true);
         popUpShow("Drop wheat bags to the farm.");
+        missionStart = true;
+
     }
 
 
@@ -738,6 +805,7 @@ public class LevelsManager : MonoBehaviour
         DirectionArrowsOfLevel[4].SetActive(true);
 
         popUpShow("Cows are loaded in the truck, take the cows to the fields.");
+        missionStart = true;
 
     }
 
@@ -810,6 +878,7 @@ public class LevelsManager : MonoBehaviour
 
 
         popUpShow("Drop the wheat bags to the factory.");
+        missionStart = true;
 
     }
 
@@ -898,6 +967,7 @@ public class LevelsManager : MonoBehaviour
         popUpShow("Take the truck to the wood factory.");
 
 
+        missionStart = true;
 
     }
 
@@ -979,6 +1049,7 @@ public class LevelsManager : MonoBehaviour
 
         popUpShow("Drop wooden piles to the destination.");
 
+        missionStart = true;
 
     }
 
@@ -1054,6 +1125,7 @@ public class LevelsManager : MonoBehaviour
 
 
         popUpShow("Deliver wooden walls to industrial area.");
+        missionStart = true;
 
 
     }
@@ -1141,6 +1213,7 @@ public class LevelsManager : MonoBehaviour
 
         popUpShow("Deliver wooden pallets to customer's home.");
 
+        missionStart = true;
 
 
     }

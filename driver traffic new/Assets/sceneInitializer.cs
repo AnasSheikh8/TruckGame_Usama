@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class sceneInitializer : MonoBehaviour
 {
     public GameObject village;
@@ -9,10 +9,13 @@ public class sceneInitializer : MonoBehaviour
     public GameObject wholeScene;
     public GameObject villageAI;
     public GameObject MountainAI;
+    
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
 
+        
         envInIt();
 
     }
@@ -40,6 +43,7 @@ public class sceneInitializer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         
     }
 }
