@@ -8,10 +8,26 @@ public class minimapPathManaer : MonoBehaviour
 
     public GameObject[] nodes;
     public GameObject pathLine;
-
+    public int count=0;
     // Start is called before the first frame update
     void Start()
     {
+
+
+       for(int i=0; i< GetComponentsInChildren<Transform>().Length; i++)
+        {
+            if (GetComponentsInChildren<Transform>()[i].name.Contains("LineNode"))
+            {
+
+                nodes[count] = GetComponentsInChildren<Transform>()[i].gameObject;
+                count++;
+            }
+            else
+            {
+                Debug.Log("No Path");
+            }
+        }
+
 
         for (int i=0; i<nodes.Length; i++)
         {
