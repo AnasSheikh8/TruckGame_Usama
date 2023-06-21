@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OpenWorldMode.unity
     guid: 850bcfb03745b054ebb36a817fa43486
-  - enabled: 1
+  - enabled: 0
     path: Assets/empty scene.unity
     guid: 2dc08f7b5891ba04c9d7a2badb438a8b
   - enabled: 1

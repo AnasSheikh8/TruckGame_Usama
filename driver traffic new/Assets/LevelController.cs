@@ -38,7 +38,7 @@ public class LevelController : MonoBehaviour
         else 
         { 
         }
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
 

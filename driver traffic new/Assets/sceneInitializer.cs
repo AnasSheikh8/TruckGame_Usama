@@ -9,7 +9,8 @@ public class sceneInitializer : MonoBehaviour
     public GameObject wholeScene;
     public GameObject villageAI;
     public GameObject MountainAI;
-    
+
+    public GameObject Levels;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +25,35 @@ public class sceneInitializer : MonoBehaviour
 
     void envInIt()
     {
-        if (ScenesManager.instance.currentLevel == 7 || ScenesManager.instance.currentLevel == 8 || ScenesManager.instance.currentLevel == 3)
+        
+        if (ScenesManager.instance.currentMode == 1)
+        {
+            if (ScenesManager.instance.currentLevel == 7 || ScenesManager.instance.currentLevel == 8 || ScenesManager.instance.currentLevel == 3)
+            {
+                Instantiate(Mountain);
+                MountainAI.SetActive(true);
+            }
+            else
+            {
+                Instantiate(village);
+                villageAI.SetActive(true);
+            }
+
+            //seperation.SetActive(true);
+            Levels.SetActive(true);
+        }
+
+        else
         {
             Instantiate(Mountain);
             MountainAI.SetActive(true);
-        }
-        else
-        {
+
             Instantiate(village);
             villageAI.SetActive(true);
+            GameObject.Find("wallMountain").SetActive(false);
+            GameObject.Find("wallVillage (4)").SetActive(false);
+
+            Levels.SetActive(false);
         }
 
         //yield return new WaitForSeconds(0.1f);

@@ -7,11 +7,27 @@ public class SoundsSettings : MonoBehaviour
 
 
     public GameObject audioSourceMusic;
-    public GameObject audioSourceSounds;
+    public AudioSource[] audioSourceSounds;
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < audioSourceSounds.Length; i++)
+        {
+            if (PlayerPrefs.GetInt("sound") == 1)
+            {
+                audioSourceSounds[i].enabled = true;
+
+            }
+            else
+            {
+                audioSourceSounds[i].enabled = false;
+
+            }
+
+
+
+        }
+
     }
 
     // Update is called once per frame
@@ -27,14 +43,9 @@ public class SoundsSettings : MonoBehaviour
             audioSourceMusic.SetActive(false);
         }
 
-        if (PlayerPrefs.GetInt("sound") == 1)
-        {
-            audioSourceSounds.SetActive(true);
-        }
-        else
-        {
-            audioSourceSounds.SetActive(false);
-        }
+
+
+       
 
 
     }
@@ -44,12 +55,29 @@ public class SoundsSettings : MonoBehaviour
     public void soundOn()
     {
         PlayerPrefs.SetInt("sound",1);
+
+        for (int i = 0; i < audioSourceSounds.Length; i++)
+        {
+                
+            audioSourceSounds[i].enabled=true;
+            
+        }
+
+
     }
 
 
     public void soundOff()
     {
         PlayerPrefs.SetInt("sound", 0);
+        for (int i = 0; i < audioSourceSounds.Length; i++)
+        {
+
+            audioSourceSounds[i].enabled=false;
+
+        }
+
+
     }
 
     public void musicOn()

@@ -50,6 +50,13 @@ public class trucksManager : MonoBehaviour
     }
 
 
+    public void PauseBtn()
+    {
+        Time.timeScale = 0;
+        gamePausedPanel.SetActive(true);
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -62,8 +69,8 @@ public class trucksManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //SceneManager.LoadScene(0);
-            Time.timeScale = 0;
-            gamePausedPanel.SetActive(true);
+
+            PauseBtn();
         }
 
         //Debug.Log(truckSelected);

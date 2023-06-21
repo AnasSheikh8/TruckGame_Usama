@@ -1235,8 +1235,17 @@ public class LevelsManager : MonoBehaviour
     public void popUpShow(string missionText)
     {
 
-        popUp.SetActive(true);
-        popUpText.text = missionText;
+        if (ScenesManager.instance.currentMode == 1)
+        {
+            popUp.SetActive(true);
+            popUpText.text = missionText;
+        }
+        else
+        {
+            popUp.SetActive(true);
+            popUpText.text = "You are free to go anywhere!";
+
+        }
     }
 
 

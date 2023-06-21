@@ -170,7 +170,7 @@ public class MainMenuManager : MonoBehaviour
 
         ScenesManager.instance.truckSelected = nowShowingTruck;
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -197,6 +197,12 @@ public class MainMenuManager : MonoBehaviour
         ScenesManager.instance.currentLevel = levelNum;
     }
 
+
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
 
     // Update is called once per frame
     void Update()
