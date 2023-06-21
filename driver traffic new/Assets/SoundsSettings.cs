@@ -8,25 +8,38 @@ public class SoundsSettings : MonoBehaviour
 
     public GameObject audioSourceMusic;
     public AudioSource[] audioSourceSounds;
+
+    public GameObject[] soundButtons;
+    public GameObject[] musicButtons;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < audioSourceSounds.Length; i++)
-        {
+       
             if (PlayerPrefs.GetInt("sound") == 1)
             {
-                audioSourceSounds[i].enabled = true;
+            
+                for (int i = 0; i < audioSourceSounds.Length; i++)
+                {
+                    audioSourceSounds[i].enabled = true;
+                }
+                soundButtons[0].SetActive(false);
+                soundButtons[1].SetActive(true);
 
             }
             else
             {
-                audioSourceSounds[i].enabled = false;
+                for (int i = 0; i < audioSourceSounds.Length; i++)
+                {
+                    audioSourceSounds[i].enabled = false;
+                }
+                soundButtons[0].SetActive(true);
+                soundButtons[1].SetActive(false);
 
             }
 
 
 
-        }
+        
 
     }
 
@@ -37,10 +50,15 @@ public class SoundsSettings : MonoBehaviour
         if(PlayerPrefs.GetInt("music")==1)
         {
             audioSourceMusic.SetActive(true);
+            musicButtons[0].SetActive(false);
+            musicButtons[1].SetActive(true);
+
         }
         else
         {
             audioSourceMusic.SetActive(false);
+            musicButtons[0].SetActive(true);
+            musicButtons[1].SetActive(false);
         }
 
 

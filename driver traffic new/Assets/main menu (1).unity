@@ -11914,8 +11914,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceMusic: {fileID: 1865041486}
-  audioSourceSounds:
-  - {fileID: 0}
+  audioSourceSounds: []
+  soundButtons:
+  - {fileID: 558948528}
+  - {fileID: 675829873}
+  musicButtons:
+  - {fileID: 1904156102}
+  - {fileID: 1150416302}
 --- !u!4 &1287578489
 Transform:
   m_ObjectHideFlags: 0
