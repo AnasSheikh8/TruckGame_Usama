@@ -635,7 +635,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: CROSS_PLATFORM_INPUT;MOBILE_INPUT;EASYROADS3D_PRO;BCG_RCC
     PS4: BCG_RCC
-    Standalone: CROSS_PLATFORM_INPUT;BCG_RCC
+    Standalone: CROSS_PLATFORM_INPUT;BCG_RCC;EASYROADS3D_PRO
     WebGL: BCG_RCC
     Windows Store Apps: MOBILE_INPUT
     XboxOne: BCG_RCC
