@@ -30,12 +30,14 @@ public class sceneInitializer : MonoBehaviour
         {
             if (ScenesManager.instance.currentLevel == 7 || ScenesManager.instance.currentLevel == 8 || ScenesManager.instance.currentLevel == 3)
             {
-                Instantiate(Mountain);
+                Mountain.SetActive(true);
+                village.SetActive(false);
                 MountainAI.SetActive(true);
             }
             else
             {
-                Instantiate(village);
+                Mountain.SetActive(false);
+                village.SetActive(true);
                 villageAI.SetActive(true);
             }
 
@@ -45,11 +47,12 @@ public class sceneInitializer : MonoBehaviour
 
         else
         {
-            Instantiate(Mountain);
+            Mountain.SetActive(true);
+            village.SetActive(true);
             MountainAI.SetActive(true);
-
-            Instantiate(village);
             villageAI.SetActive(true);
+
+
             GameObject.Find("wallMountain").SetActive(false);
             GameObject.Find("wallVillage (4)").SetActive(false);
 
