@@ -4401,7 +4401,6 @@ GameObject:
   m_Component:
   - component: {fileID: 491023057}
   - component: {fileID: 491023056}
-  - component: {fileID: 491023055}
   - component: {fileID: 491023058}
   m_Layer: 0
   m_Name: TruckSelectionCamera
@@ -4410,14 +4409,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &491023055
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491023054}
-  m_Enabled: 1
 --- !u!20 &491023056
 Camera:
   m_ObjectHideFlags: 0
