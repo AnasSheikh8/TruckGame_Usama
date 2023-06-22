@@ -73,11 +73,18 @@ public class AIVehicle : MonoBehaviour
     private Transform player;
     private Node nodeComponenet;
 
+    private AIContoller aiController;
+
     //-----------------------------------------------------------------------------------------------
 
     void Start()
     {
-        player = AIContoller.manager.player;
+        aiController = FindObjectOfType<AIContoller>();
+        if (aiController)
+        {
+            player = aiController.player;
+        }
+        //player = AIContoller.manager.player;
         currentFwdSpeed = forwardSpeed;
 
         if (vehicleStatus == VehicleStatus.AI)

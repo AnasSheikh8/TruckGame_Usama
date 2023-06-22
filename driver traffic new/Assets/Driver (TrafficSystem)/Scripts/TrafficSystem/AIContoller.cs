@@ -34,8 +34,9 @@ public class AIContoller : MonoBehaviour
 
     void Awake()
     {
-        player = playerCamera.transform;
         manager = this;
+
+        player = playerCamera.transform;
     }
 
 
