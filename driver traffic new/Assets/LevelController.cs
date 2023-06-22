@@ -25,6 +25,7 @@ public class LevelController : MonoBehaviour
         //ScenesManager.instance.currentLevel;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Instance.GetInstance().my_AdManager.hideBigBanner();
     }
 
     public void nextLevel()
@@ -38,7 +39,10 @@ public class LevelController : MonoBehaviour
         else 
         { 
         }
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
+
+        Instance.GetInstance().my_AdManager.hideBigBanner();
+
     }
 
 
@@ -46,7 +50,8 @@ public class LevelController : MonoBehaviour
     public void homeBtn()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     } 
 
 }

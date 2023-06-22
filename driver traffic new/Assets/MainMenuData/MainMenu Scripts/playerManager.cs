@@ -70,7 +70,7 @@ public class playerManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
         //Debug.Log(truckSelected);

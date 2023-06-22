@@ -433,9 +433,12 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level1dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
+
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -555,9 +558,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level2dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -637,9 +642,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level3dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -719,9 +726,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level4dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -812,9 +821,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level5dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -885,9 +896,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level6dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -974,9 +987,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level7dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -1056,9 +1071,13 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level8dp()
     {
+
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
+
     }
 
 
@@ -1133,9 +1152,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level9dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 
@@ -1221,9 +1242,11 @@ public class LevelsManager : MonoBehaviour
 
     IEnumerator level10dp()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
         BlackPanel.SetActive(true);
         yield return new WaitForSeconds(2);
         levelPass.SetActive(true);
+        Instance.GetInstance().my_AdManager.showBigBanner();
     }
 
 

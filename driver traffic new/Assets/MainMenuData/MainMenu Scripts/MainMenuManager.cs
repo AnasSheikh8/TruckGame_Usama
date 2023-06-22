@@ -89,6 +89,23 @@ public class MainMenuManager : MonoBehaviour
             }
 
         }
+
+
+
+        showBanner();
+    }
+
+
+
+    public void showBanner()
+    {
+        Instance.GetInstance().my_AdManager.showBanner();
+    }
+
+
+    public void ShowBothInterstitial()
+    {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
     }
 
 
@@ -170,7 +187,7 @@ public class MainMenuManager : MonoBehaviour
 
         ScenesManager.instance.truckSelected = nowShowingTruck;
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 
@@ -181,7 +198,7 @@ public class MainMenuManager : MonoBehaviour
 
         ScenesManager.instance.truckSelected = nowShowingTruck;
         ScenesManager.instance.currentMode = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 

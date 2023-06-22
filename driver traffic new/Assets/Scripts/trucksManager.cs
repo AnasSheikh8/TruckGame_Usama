@@ -47,13 +47,20 @@ public class trucksManager : MonoBehaviour
     {
         Time.timeScale = 1;
         gamePausedPanel.SetActive(false);
+
+        Instance.GetInstance().my_AdManager.hideBigBanner();
     }
 
 
     public void PauseBtn()
     {
+        Instance.GetInstance().my_AdManager.showBothInterstitial();
+
         Time.timeScale = 0;
         gamePausedPanel.SetActive(true);
+
+        Instance.GetInstance().my_AdManager.showBigBanner();
+
     }
 
 
