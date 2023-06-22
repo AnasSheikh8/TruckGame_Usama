@@ -11,12 +11,19 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
 
-        GetComponent<AudioSource>().clip= songs[Random.Range(0, 2)];
-
-        GetComponent<AudioSource>().Play();
 
     }
 
+
+
+
+    private void Awake()
+    {
+
+        GetComponent<AudioSource>().clip = songs[Random.Range(0, 2)];
+
+        GetComponent<AudioSource>().Play();
+    }
     // Update is called once per frame
     void Update()
     {
