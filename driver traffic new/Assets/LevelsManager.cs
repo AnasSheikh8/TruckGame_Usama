@@ -55,6 +55,9 @@ public class LevelsManager : MonoBehaviour
     public GameObject gameOverPanel;
     bool missionStart = false;
 
+
+    public GameObject[] levelIcons;
+    public GameObject respawnBtn;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +71,7 @@ public class LevelsManager : MonoBehaviour
         floorPerson.SetActive(false);
         level5Cow.SetActive(false);
 
+        levelIcons[currentLevel].SetActive(true);
         StartCoroutine(loadingSlider());
 
 
@@ -75,6 +79,7 @@ public class LevelsManager : MonoBehaviour
         {
             popUpShow("Insufficient fuel for upcoming missions, arrows are telling the way to petrol pump.");
             missionStart = true;
+            respawnBtn.SetActive(true);
 
         }
         else if(currentLevel==4)
@@ -144,7 +149,6 @@ public class LevelsManager : MonoBehaviour
         }
 
 
-       
     }
 
 
@@ -494,7 +498,7 @@ public class LevelsManager : MonoBehaviour
         DirectionArrowsOfLevel[0].SetActive(true);
         popUpShow("Follow the arrows to take the boxes to the destination");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -552,7 +556,7 @@ public class LevelsManager : MonoBehaviour
         DirectionArrowsOfLevel[1].SetActive(true);
         popUpShow("Deliver vegitables to the market.");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -636,7 +640,7 @@ public class LevelsManager : MonoBehaviour
 
         popUpShow("Now we have enough fuel, let's park the truck");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -720,7 +724,7 @@ public class LevelsManager : MonoBehaviour
         DirectionArrowsOfLevel[3].SetActive(true);
         popUpShow("Drop wheat bags to the farm.");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -815,7 +819,7 @@ public class LevelsManager : MonoBehaviour
 
         popUpShow("Cows are loaded in the truck, take the cows to the fields.");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -890,7 +894,7 @@ public class LevelsManager : MonoBehaviour
 
         popUpShow("Drop the wheat bags to the factory.");
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -981,7 +985,7 @@ public class LevelsManager : MonoBehaviour
 
 
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -1065,7 +1069,7 @@ public class LevelsManager : MonoBehaviour
         popUpShow("Drop wooden piles to the destination.");
 
         missionStart = true;
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -1146,7 +1150,7 @@ public class LevelsManager : MonoBehaviour
         popUpShow("Deliver wooden walls to industrial area.");
         missionStart = true;
 
-
+        respawnBtn.SetActive(true);
     }
 
 
@@ -1236,7 +1240,7 @@ public class LevelsManager : MonoBehaviour
 
         missionStart = true;
 
-
+        respawnBtn.SetActive(true);
     }
 
 

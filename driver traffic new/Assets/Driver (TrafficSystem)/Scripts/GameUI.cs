@@ -28,6 +28,7 @@ public class GameUI : MonoBehaviour
         public GameObject bigMap;
         public GameObject vehicleControl;
         public GameObject playerControl;
+
     }
 
     [System.Serializable]

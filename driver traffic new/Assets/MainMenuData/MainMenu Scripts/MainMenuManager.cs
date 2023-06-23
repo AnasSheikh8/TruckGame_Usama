@@ -23,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject[] missions;
     public GameObject[] locks;
 
+    public GameObject NextBtn;
 
 
     private void Awake()
@@ -49,10 +50,10 @@ public class MainMenuManager : MonoBehaviour
         /*PlayerPrefs.SetInt("purchased2", 0);
         PlayerPrefs.SetInt("purchased1", 0);
         */
-        if (PlayerPrefs.GetInt("coins") == 0)
+        /*if (PlayerPrefs.GetInt("coins") == 0)
         {
             PlayerPrefs.SetInt("coins", 5000);
-        }
+        }*/
 
         //For testing
 
@@ -233,17 +234,21 @@ public class MainMenuManager : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("purchased" + nowShowingTruck) != 1)
             {
+                NextBtn.SetActive(false);
                 lockScreen.SetActive(true);
+
             }
             else
             {
                 lockScreen.SetActive(false);
+                NextBtn.SetActive(true);
             }
                 
         }
         else
         {
             lockScreen.SetActive(false);
+            NextBtn.SetActive(true);
         }
 
 
@@ -262,6 +267,7 @@ public class MainMenuManager : MonoBehaviour
         {
             popUp.SetActive(true);
             lockScreen.SetActive(false);
+            NextBtn.SetActive(true);
             PlayerPrefs.SetInt("purchased"+nowShowingTruck, 1);
             PopUpHeader.text = "Unlocked!";
             popUpTxt.text = "New Truck Unlocked By " + thisTruckRate + " Coins!";

@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
 
-        GetComponent<AudioSource>().clip = songs[Random.Range(0, 2)];
+        GetComponent<AudioSource>().clip = songs[0];
 
         GetComponent<AudioSource>().Play();
     }

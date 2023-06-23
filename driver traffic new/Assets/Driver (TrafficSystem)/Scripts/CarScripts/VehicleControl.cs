@@ -57,6 +57,7 @@ public class VehicleControl : MonoBehaviour
     [System.Serializable]
     public class CarSounds
     {
+        //public AudioSource music;
         public AudioSource IdleEngine;
 
         public AudioSource crash;
@@ -447,6 +448,7 @@ public class VehicleControl : MonoBehaviour
 
             carSounds.IdleEngine.mute = true;
             carSounds.nitro.mute = true;
+            //carSounds.music.mute = true;
 
         }
         else
@@ -456,6 +458,7 @@ public class VehicleControl : MonoBehaviour
                 carSounds.IdleEngine.mute = false;
                 carSounds.nitro.mute = false;
                 carOff = false;
+                //carSounds.music.mute = false;
 
             }
         }
