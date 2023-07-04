@@ -7,9 +7,24 @@ public class LevelController : MonoBehaviour
 
 
     int currentLevel;
+    public GameObject nextBtn;
     // Start is called before the first frame update
     void Start()
     {
+
+        if (ScenesManager.instance.currentLevel >= 9)
+        {
+            nextBtn.SetActive(false);
+
+
+        }
+        else
+        {
+            nextBtn.SetActive(true);
+
+        }
+
+
 
     }
 
