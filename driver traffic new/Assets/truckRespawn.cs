@@ -40,9 +40,10 @@ public class truckRespawn : MonoBehaviour
     {
         float minDist;
 
+        minDist = Vector3.Distance(truck.transform.position, minimapPathManaer.instance.nodes[0].transform.position);
         for (int i = 0; i < minimapPathManaer.instance.nodes.Length; i++)
         {
-            minDist = Vector3.Distance(truck.transform.position, minimapPathManaer.instance.nodes[0].transform.position);
+
 
             if (Vector3.Distance(truck.transform.position, minimapPathManaer.instance.nodes[i].transform.position) < minDist)
             {
@@ -52,20 +53,20 @@ public class truckRespawn : MonoBehaviour
                 respawnPos = minimapPathManaer.instance.nodes[i].transform;
 
             }
-            else
+            /*else
             {
                 minDist = Vector3.Distance(truck.transform.position, minimapPathManaer.instance.nodes[0].transform.position);
 
                 respawnPos = minimapPathManaer.instance.nodes[0].transform;
 
-            }
+            }*/
 
 
 
         }
 
-        truck.transform.position = new Vector3( respawnPos.position.x, respawnPos.transform.position.y + 1, respawnPos.transform.position.z);
-        player.transform.position = new Vector3( playerRespawnPos.position.x, playerRespawnPos.position.y+1, playerRespawnPos.position.z);
+        truck.transform.position = new Vector3( respawnPos.transform.position.x, respawnPos.transform.position.y + 1, respawnPos.transform.position.z);
+        //player.transform.position = new Vector3(respawnPos.transform.position.x, respawnPos.transform.position.y + 1, respawnPos.transform.position.z);
 
 
     }
