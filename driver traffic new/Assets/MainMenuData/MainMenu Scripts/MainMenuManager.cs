@@ -183,6 +183,16 @@ public class MainMenuManager : MonoBehaviour
 
 
 
+
+    public void rateUsBtn()
+    {
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.indian.simulator.game.truck.sim");
+    }
+
+
+
+
+
     public void SelectBtn()
     {
 

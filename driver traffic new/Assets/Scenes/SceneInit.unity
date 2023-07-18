@@ -646,6 +646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 246540957, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
+      propertyPath: UseThisPlugin
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5599757201707446841, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -704,7 +708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
       propertyPath: _iOSGameId
-      value: 5324003
+      value: 5323908
       objectReference: {fileID: 0}
     - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
       propertyPath: admobAppID
@@ -715,8 +719,16 @@ PrefabInstance:
       value: ca-app-pub-5800537995682624/8168640496
       objectReference: {fileID: 0}
     - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
+      propertyPath: admobTestBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
+      propertyPath: unityTestBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
       propertyPath: _androidGameId
-      value: 5324002
+      value: 5323909
       objectReference: {fileID: 0}
     - target: {fileID: 5599757202899550506, guid: 3626c816fa99584438e0bd6e0cbda9ca, type: 3}
       propertyPath: interstitialID
