@@ -57,7 +57,15 @@ public class MainMenuManager : MonoBehaviour
 
         //For testing
 
+        if (PlayerPrefs.GetInt("FirstTime") == 0)
+        {
+            
+            PlayerPrefs.SetInt("sound", 1);
+            PlayerPrefs.SetInt("music", 1);
+            
+            PlayerPrefs.SetInt("FirstTime", 1);
 
+        }
 
 
 
